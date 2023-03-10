@@ -37,6 +37,7 @@ class NivelController(Resource):
         try:
             data_validada =dto.load(data)
             print(data_validada)
+
             nuevo_nivel = Nivel(numero=data.get('numero'), descripcion=data.get
             ('descripcion'))
             # con el metodo add indicam,os que queremos guardar registro
