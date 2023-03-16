@@ -15,7 +15,6 @@ app.config['JWT_SECRET_KEY'] = 'ultrasupersecreto'
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=1,minutes=10)
 
 api = Api(app)
-
 conexion.init_app(app)
 
 Migrate(app = app,db = conexion)
@@ -27,7 +26,6 @@ api.add_resource(UsuariosController, '/registro')
 api.add_resource(LoginController, '/login')
 api.add_resource(PerfilController, '/perfil')
 api.add_resource(TareasController, '/tareas')
-api.add_resource(TareasController, '/buscar-tarea')
 
 
 if  __name__ == '__main__':
